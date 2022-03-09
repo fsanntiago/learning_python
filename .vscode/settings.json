@@ -1,4 +1,32 @@
 {
+    "python.languageServer": "Pylance",
+    "python.defaultInterpreterPath": "venv\\Scripts\\python.exe",
+    // Formatar com Black e organizar imports automaticamente
+    "python.formatting.provider": "black",
+    "python.formatting.blackPath": "black",
+    "python.formatting.blackArgs": ["--line-length", "88"],
+    "[python]": {
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": true
+        }
+    },
+
+    // Compatibilidade Black-isort
+    "python.sortImports.args": ["-m3", "--tc", "-fgw 0", "--up", "-n", "-l 88"],
+
+    // Compatibilidade Black-Flake8
     "python.linting.flake8Enabled": true,
-    "python.linting.enabled": true,
+    "python.linting.flake8Path": "flake8",
+    "python.linting.flake8Args": ["--ignore=E203, W503", "--max-line-length=88"],
+
+    // Compatibilidade Black-Pylint
+    "python.linting.pylintEnabled": true,
+    "python.linting.pylintPath": "pylint",
+    // Modifique essa configuração, habilitando e desabilitando as mensagens de acordo com suas preferências
+    "python.linting.pylintArgs": [
+        "--disable=all",
+        "--enable=F,E,unreachable,duplicate-key,unnecessary-semicolon,global-variable-not-assigned,unused-variable,binary-op-exception,bad-format-string,anomalous-backslash-in-string,bad-open-mode",
+        "--max-line-length=88",
+    ],
 }
