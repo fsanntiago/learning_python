@@ -33,15 +33,10 @@ class User:
         """Display a personalized greeting to the user"""
         print(f"Welcome back, {self.username}")
 
-    @staticmethod
-    def get_totaluser():
-        return User._total_user
-
 
 fsantiago = User("fabricio", "santiago", "fsantiago", "fabricio@gmail.com", "brazil")
 fsantiago.describe_user()
-print(fsantiago.get_totaluser())
+
 
 m_ferreira = User("maria", "ferreira", "m_ferreira", "maria@gmail.com", "chile")
 m_ferreira.describe_user()
-print(m_ferreira.get_totaluser())
