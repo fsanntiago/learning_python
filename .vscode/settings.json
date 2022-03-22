@@ -1,6 +1,6 @@
 {
     "python.languageServer": "Pylance",
-    //"python.defaultInterpreterPath": "${env:PYTHON_INSTALL_LOC}",
+    "python.defaultInterpreterPath": "${env:PYTHON_INSTALL_LOC}",
     // Formatar com Black e organizar imports automaticamente
     "python.formatting.provider": "black",
     "python.formatting.blackPath": "black",
